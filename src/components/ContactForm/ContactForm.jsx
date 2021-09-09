@@ -2,8 +2,9 @@ import { useState } from "react";
 import "./ContactForm.scss";
 
 import { useSelector, useDispatch } from "react-redux";
-import * as actions from "../../redux/phonebook/contacts-action";
 import { getFilterContacts } from "../../redux/phonebook/contacts-selector";
+import { fetchCreateContact } from "../../redux/phonebook/contacts-operations";
+import { v4 as uuidv4 } from "uuid";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -18,7 +19,8 @@ const ContactForm = () => {
       return false;
     }
 
-    dispatch(actions.addItem(newItem));
+    const contact = { id: uuidv4(), ...newItem };
+    dispatch(fetchCreateContact(contact));
   };
 
   const checkDoubleName = (newContact) => {

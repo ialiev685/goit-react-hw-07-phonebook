@@ -1,7 +1,7 @@
 import "./ContactItem.scss";
-import * as actions from "../../redux/phonebook/contacts-action";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
+import { fetchDeleteContact } from "../../redux/phonebook/contacts-operations";
 
 const ContactItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const ContactItem = ({ name, number, id }) => {
         className="contacts-list__button"
         type="button"
         value="delete"
-        onClick={() => dispatch(actions.deleteItem(id))}
+        onClick={() => dispatch(fetchDeleteContact(id))}
       />
     </li>
   );
