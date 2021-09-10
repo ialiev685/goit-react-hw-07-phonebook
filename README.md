@@ -1,6 +1,6 @@
-# goit-react-hw-02-phonebook
+# goit-react-hw-07-phonebook
 
-"homepage": "https://ialiev685.github.io/goit-react-hw-02-feedback",
+"homepage": "https://ialiev685.github.io/goit-react-hw-07-phonebook",
 
 npm install --save gh-pages
 "predeploy": "npm run build",
