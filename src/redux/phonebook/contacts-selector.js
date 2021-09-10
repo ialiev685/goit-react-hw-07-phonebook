@@ -7,7 +7,6 @@ export const getIsLoader = (state) => state.contacts.isLoader;
 // export const getFilterContacts = (state) => {
 //   const items = getItems(state);
 //   const filter = getFilter(state);
-//   console.log("повтор");
 //   const normalizedFilter = filter.toLowerCase();
 
 //   return items.filter(({ name }) =>
@@ -19,7 +18,7 @@ export const getFilterContacts = createSelector(
   [getItems, getFilter],
   (items, filter) => {
     const normalizedFilter = filter.toLowerCase();
-    console.log("повтор");
+
     return items.filter(({ name }) =>
       name.toLowerCase().includes(normalizedFilter)
     );

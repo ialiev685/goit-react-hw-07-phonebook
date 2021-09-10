@@ -1,9 +1,7 @@
 import ContactItem from "../ContactItem";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getIsLoader } from "../../redux/phonebook/contacts-selector";
-import { getFilterContacts } from "../../redux/phonebook/contacts-selector";
-import { fetchContacts } from "../../redux/phonebook/contacts-operations";
+import { getIsLoader, getFilterContacts, fetchContacts } from "redux/phonebook";
 import "./ContactsList.scss";
 
 const ContactsList = () => {

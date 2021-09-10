@@ -2,8 +2,7 @@ import { useState } from "react";
 import "./ContactForm.scss";
 
 import { useSelector, useDispatch } from "react-redux";
-import { getFilterContacts } from "../../redux/phonebook/contacts-selector";
-import { fetchCreateContact } from "../../redux/phonebook/contacts-operations";
+import { getFilterContacts, fetchCreateContact } from "redux/phonebook";
 import { v4 as uuidv4 } from "uuid";
 
 const ContactForm = () => {

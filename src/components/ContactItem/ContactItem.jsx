@@ -1,7 +1,7 @@
 import "./ContactItem.scss";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
-import { fetchDeleteContact } from "../../redux/phonebook/contacts-operations";
+import { fetchDeleteContact } from "redux/phonebook/contacts-operations";
 
 const ContactItem = ({ name, number, id }) => {
   const dispatch = useDispatch();

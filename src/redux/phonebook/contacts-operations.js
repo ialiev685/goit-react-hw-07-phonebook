@@ -18,7 +18,7 @@ export const fetchContacts = createAsyncThunk(
 
       return contacts.data;
     } catch (err) {
-      return err;
+      return err.message;
     }
   }
 );
@@ -42,7 +42,7 @@ export const fetchCreateContact = createAsyncThunk(
 
       return contacts.data;
     } catch (err) {
-      return err;
+      return err.message;
     }
   }
 );
@@ -65,7 +65,8 @@ export const fetchDeleteContact = createAsyncThunk(
         return id;
       }
     } catch (err) {
-      return err;
+      console.dir(err);
+      return err.message;
     }
   }
 );

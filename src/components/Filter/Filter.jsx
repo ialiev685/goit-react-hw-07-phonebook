@@ -1,14 +1,13 @@
 import "./Filter.scss";
 
 import { useSelector, useDispatch } from "react-redux";
-import { getFilter } from "../../redux/phonebook/contacts-selector";
-import * as actions from "../../redux/phonebook/contacts-action";
+import { getFilter, getFilterItems } from "redux/phonebook";
 
 const Filter = () => {
   const filter = useSelector(getFilter);
   const dispatch = useDispatch();
 
-  const changeFilter = (e) => dispatch(actions.getFilterItems(e.target.value));
+  const changeFilter = (e) => dispatch(getFilterItems(e.target.value));
 
   return (
     <label className="filter-input">
