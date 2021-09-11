@@ -1,14 +1,9 @@
 {
   "contacts": [
     {
-      "id": "9bff7e8c-4a96-4226-937a-454222e2afc3",
+      "id": "dce5e0ff-be7d-471c-bc44-c086f0b3c64f",
       "name": "ильфат",
       "number": "89509499961"
-    },
-    {
-      "id": "dc8f0f50-79e1-4773-b4d4-ddec1a6014ed",
-      "name": "ирина",
-      "number": "89063295632"
     }
   ]
 }

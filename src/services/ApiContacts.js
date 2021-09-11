@@ -4,14 +4,14 @@ const API = axios.create({
   baseURL: "http://localhost:3001",
 });
 
-export const fetchContacts = () => {
-  return API.get("/contacts").then((response) => response);
+export const fetchContacts = async () => {
+  return await API.get("/contacts");
 };
 
-export const fetchCreateContact = (item) => {
-  return API.post("/contacts", item).then((response) => response);
+export const fetchCreateContact = async (item) => {
+  return await API.post("/contacts", item);
 };
 
-export const fetchDeleteContact = (id) => {
-  return API.delete(`/contacts/${id}`).then((response) => response);
+export const fetchDeleteContact = async (id) => {
+  return await API.delete(`/contacts/${id}`);
 };
