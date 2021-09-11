@@ -65,7 +65,6 @@ export const fetchDeleteContact = createAsyncThunk(
         return id;
       }
     } catch (err) {
-      console.dir(err);
       return err.message;
     }
   }

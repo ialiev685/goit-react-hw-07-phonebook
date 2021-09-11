@@ -1,4 +1,9 @@
-export { getFilter, getIsLoader, getFilterContacts } from "./contacts-selector";
+export {
+  getFilter,
+  getIsLoader,
+  getError,
+  getFilterContacts,
+} from "./contacts-selector";
 export {
   fetchContacts,
   fetchCreateContact,
