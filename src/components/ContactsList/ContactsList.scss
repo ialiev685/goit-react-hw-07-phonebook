@@ -1,12 +1,18 @@
 .contacts-wrapper {
   position: relative;
 
-  &__loader {
+  &__loader,
+  &__error {
     margin: 0;
     position: absolute;
     top: 5px;
+  }
 
+  &__loader {
     color: #0056ff;
+  }
+  &__error {
+    color: red;
   }
 
   &__contacts-list {

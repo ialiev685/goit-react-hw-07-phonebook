@@ -12,13 +12,13 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchContacts = createAsyncThunk(
   "contacts/fetchContacts",
-  async () => {
+  async (_, { rejectWithValue }) => {
     try {
       const contacts = await API.fetchContacts();
 
       return contacts.data;
     } catch (err) {
-      return err.message;
+      return rejectWithValue(err.message);
     }
   }
 );
@@ -36,13 +36,13 @@ export const fetchContacts = createAsyncThunk(
 
 export const fetchCreateContact = createAsyncThunk(
   "contacts/fetchCreateContact",
-  async (item) => {
+  async (item, { rejectWithValue }) => {
     try {
       const contacts = await API.fetchCreateContact(item);
 
       return contacts.data;
     } catch (err) {
-      return err.message;
+      return rejectWithValue(err.message);
     }
   }
 );
@@ -58,14 +58,14 @@ export const fetchCreateContact = createAsyncThunk(
 
 export const fetchDeleteContact = createAsyncThunk(
   "contacts/fetchDeleteContact",
-  async (id) => {
+  async (id, { rejectWithValue }) => {
     try {
       const requestDelete = await API.fetchDeleteContact(id);
       if (requestDelete.statusText === "OK") {
         return id;
       }
     } catch (err) {
-      return err.message;
+      return rejectWithValue(err.message);
     }
   }
 );

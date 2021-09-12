@@ -27,6 +27,9 @@ const isLoader = createReducer(false, {
   [fetchDeleteContact.fulfilled]: () => false,
   [fetchContacts.fulfilled]: () => false,
   [fetchCreateContact.fulfilled]: () => false,
+  [fetchDeleteContact.rejected]: () => false,
+  [fetchContacts.rejected]: () => false,
+  [fetchCreateContact.rejected]: () => false,
 });
 
 const error = createReducer(null, {
